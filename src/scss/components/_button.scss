@@ -1,0 +1,43 @@
+.btn{
+  border: 0;
+  outline: 0;
+  color: $btn-main-color;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+
+
+  @include mobile {
+      font-size: 1rem;
+  }
+
+  &__txt{
+    display: block;
+    transition: transform 0.5s ease;
+    padding: 1rem 2rem;
+  }
+
+  &__icon {
+    display: block;
+    transition: transform 0.5s ease;
+    @include flex(center, center);
+    font-size: 1rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+}
+
+  &-animate:hover &__txt {
+    transform: translateX(100%);
+  }
+
+  &-animate:hover  &__icon {
+    transform: translateX(0);
+  }
+}

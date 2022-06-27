@@ -1,0 +1,12 @@
+.section{
+  margin-bottom: 50px;
+     & > * ~ * {
+        margin-top: 70px;
+    }
+
+  &__title{
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    text-align: center;
+  }
+}
